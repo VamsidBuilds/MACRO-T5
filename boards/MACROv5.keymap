@@ -1,0 +1,20 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &none // Dummy binding
+            >;
+            
+            /* Encoder test bindings - will print to serial */
+            sensor-bindings = <
+                &inc_dec_kp C_VOL_UP C_VOL_DN  // Volume control
+                &inc_dec_kp PG_UP PG_DN         // Alternative: Page scroll
+            >;
+        };
+    };
+};
